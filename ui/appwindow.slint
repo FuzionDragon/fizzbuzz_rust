@@ -1,0 +1,37 @@
+import { Button, VerticalBox } from "std-widgets.slint";
+
+export component AppWindow inherits Window {
+    in property <string> result: "";
+    in-out property <int> counter: 0;
+    callback request-increment-counter;
+    callback request-reset-counter;
+    GridLayout {
+    	padding: 50px;
+	spacing: 25px;
+
+    Row {
+		Text {
+		horizontal-alignment: center;
+		    text: "Counter: \{root.counter}";
+		}
+		Text {
+		horizontal-alignment: center;
+		    text: root.result;
+		}
+	}
+	Row {
+		Button {
+            text: "Increment counter";
+            clicked => {
+                root.request-increment-counter();
+            }
+        }
+		Button {
+		    text: "Reset counter";
+		    clicked => {
+                root.request-reset-counter();
+		    }
+		}
+	}
+    }
+}
