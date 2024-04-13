@@ -13,7 +13,7 @@ It allows for two button inputs
 
 2. Clone Fizzbuzz Slint repo
     ```
-    git clone 
+    git clone https://github.com/FuzionDragon/fizzbuzz_rust.git
     cd fizzbuzz_rust
     ```
 3. Build with cargo
